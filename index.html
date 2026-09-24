@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TOMAL | Premium Salat Khimar</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="#home" class="logo">
+            <span>🌿</span> TOMAL
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">All Product</a>
+            <a href="#premium">Premium Collection</a>
+            <a href="#package">Salat Khimar Package</a>
+            <a href="#khimar">Only Salat Khimar</a>
+        </nav>
+
+        <div class="nav-right">
+
+            <button class="search-btn" onclick="openSearch()">
+                🔍
+            </button>
+
+            <button class="cart-btn" onclick="openCart()">
+                🛒
+                <span id="cartCount">0</span>
+            </button>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button onclick="toggleMenu()" class="close-menu">×</button>
+
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#products" onclick="toggleMenu()">All Product</a>
+    <a href="#premium" onclick="toggleMenu()">Premium Collection</a>
+    <a href="#package" onclick="toggleMenu()">Salat Khimar Package</a>
+    <a href="#khimar" onclick="toggleMenu()">Only Salat Khimar</a>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">MODEST • BEAUTIFUL • COMFORTABLE</p>
+
+        <h1>
+            Elegant <span>Salat Khimar</span>
+            For Every Prayer
+        </h1>
+
+        <p>
+            Discover our premium collection of beautiful,
+            comfortable and modest Salat Khimar.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#products" class="primary-btn">
+                Shop Now →
+            </a>
+
+            <a href="#premium" class="secondary-btn">
+                Explore Collection
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <div class="hero-card">
+            <img
+            src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=85"
+            alt="Premium Collection">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature">
+        <span>🚚</span>
+        <div>
+            <h4>Fast Delivery</h4>
+            <p>Quick delivery all over Bangladesh</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <span>✨</span>
+        <div>
+            <h4>Premium Quality</h4>
+            <p>Comfortable & beautiful fabrics</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <span>🔒</span>
+        <div>
+            <h4>Secure Order</h4>
+            <p>Easy WhatsApp ordering</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <span>💬</span>
+        <div>
+            <h4>24/7 Support</h4>
+            <p>We're here to help</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORY ================= -->
+
+<section class="categories">
+
+    <div class="container">
+
+        <div class="section-title">
+            <p>SHOP BY CATEGORY</p>
+            <h2>Find Your Perfect Collection</h2>
+        </div>
+
+        <div class="category-grid">
+
+            <a href="#products" class="category-card">
+                <div>🌸</div>
+                <h3>All Product</h3>
+            </a>
+
+            <a href="#premium" class="category-card">
+                <div>✨</div>
+                <h3>Premium Collection</h3>
+            </a>
+
+            <a href="#package" class="category-card">
+                <div>🕌</div>
+                <h3>Salat Khimar Package</h3>
+            </a>
+
+            <a href="#khimar" class="category-card">
+                <div>🤍</div>
+                <h3>Only Salat Khimar</h3>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ALL PRODUCTS ================= -->
+
+<section class="products-section" id="products">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <p>OUR COLLECTION</p>
+                <h2>All Product</h2>
+            </div>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search product..."
+                    onkeyup="searchProducts()"
+                >
+                🔍
+            </div>
+
+        </div>
+
+
+        <div class="product-grid" id="allProducts">
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="discount">-20%</span>
+
+                    <img
+                    src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=700&q=85"
+                    alt="Elegant Khimar">
+
+                    <button class="quick-btn"
+                    onclick="quickOrder('Elegant Salat Khimar',899)">
+                        Quick Order
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">SALAT KHIMAR</span>
+
+                    <h3>Elegant Salat Khimar</h3>
+
+                    <div class="stars">★★★★★</div>
+
+                    <div class="price">
+                        ৳899
+                        <del>৳1,120</del>
+                    </div>
+
+                    <button class="cart-add"
+                    onclick="addToCart('Elegant Salat Khimar',899)">
+                        🛒 Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="discount">-15%</span>
+
+                    <img
+                    src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=85"
+                    alt="Premium Khimar">
+
+                    <button class="quick-btn"
+                    onclick="quickOrder('Premium Soft Khimar',1099)">
+                        Quick Order
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">PREMIUM</span>
+
+                    <h3>Premium Soft Khimar</h3>
+
+                    <div class="stars">★★★★★</div>
+
+                    <div class="price">
+                        ৳1,099
+                        <del>৳1,299</del>
+                    </div>
+
+                    <button class="cart-add"
+                    onclick="addToCart('Premium Soft Khimar',1099)">
+                        🛒 Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="discount">-25%</span>
+
+                    <img
+                    src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=85"
+                    alt="Prayer Khimar">
+
+                    <button class="quick-btn"
+                    onclick="quickOrder('Classic Prayer Khimar',799)">
+                        Quick Order
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">KHIMAR</span>
+
+                    <h3>Classic Prayer Khimar</h3>
+
+                    <div class="stars">★★★★★</div>
+
+                    <div class="price">
+                        ৳799
+                        <del>৳1,050</del>
+                    </div>
+
+                    <button class="cart-add"
+                    onclick="addToCart('Classic Prayer Khimar',799)">
+                        🛒 Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="discount">-18%</span>
+
+                    <img
+                    src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85"
+                    alt="Luxury Khimar">
+
+                    <button class="quick-btn"
+                    onclick="quickOrder('Luxury Salat Khimar',1299)">
+                        Quick Order
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">LUXURY</span>
+
+                    <h3>Luxury Salat Khimar</h3>
+
+                    <div class="stars">★★★★★</div>
+
+                    <div class="price">
+                        ৳1,299
+                        <del>৳1,590</del>
+                    </div>
+
+                    <button class="cart-add"
+                    onclick="addToCart('Luxury Salat Khimar',1299)">
+                        🛒 Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PREMIUM ================= -->
+
+<section class="collection-section" id="premium">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>PREMIUM QUALITY</p>
+
+            <h2>Premium Collection</h2>
+
+            <span>
+                Designed for comfort, elegance and peaceful prayer.
+            </span>
+
+        </div>
+
+
+        <div class="premium-grid">
+
+            <div class="premium-card">
+
+                <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+                alt="Premium Khimar">
+
+                <div class="premium-content">
+
+                    <h3>Royal Premium Khimar</h3>
+
+                    <p>Soft, elegant and comfortable.</p>
+
+                    <strong>৳1,499</strong>
+
+                    <button onclick="quickOrder('Royal Premium Khimar',1499)">
+                        Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="premium-card">
+
+                <img
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+                alt="Premium Collection">
+
+                <div class="premium-content">
+
+                    <h3>Elegant Pearl Collection</h3>
+
+                    <p>Perfect for special occasions.</p>
+
+                    <strong>৳1,699</strong>
+
+                    <button onclick="quickOrder('Elegant Pearl Collection',1699)">
+                        Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PACKAGE ================= -->
+
+<section class="package-section" id="package">
+
+    <div class="container">
+
+        <div class="package-content">
+
+            <div class="package-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=1000&q=85"
+                alt="Salat Khimar Package">
+
+            </div>
+
+            <div class="package-text">
+
+                <p class="small-title">SPECIAL PACKAGE</p>
+
+                <h2>Salat Khimar Package</h2>
+
+                <p>
+                    Complete prayer package for your everyday
+                    comfort. Beautiful design with premium quality.
+                </p>
+
+                <ul>
+                    <li>✓ Premium Salat Khimar</li>
+                    <li>✓ Matching Prayer Accessories</li>
+                    <li>✓ Beautiful Gift Packaging</li>
+                    <li>✓ Perfect for Gifting</li>
+                </ul>
+
+                <div class="package-price">
+                    <span>৳1,499</span>
+                    <del>৳1,899</del>
+                </div>
+
+                <button
+                    class="primary-btn"
+                    onclick="quickOrder('Salat Khimar Package',1499)">
+                    Order Package →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ONLY KHIMAR ================= -->
+
+<section class="products-section" id="khimar">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>SIMPLE & BEAUTIFUL</p>
+
+            <h2>Only Salat Khimar</h2>
+
+            <span>
+                Choose your favourite colour and style.
+            </span>
+
+        </div>
+
+
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="new">NEW</span>
+
+                    <img
+                    src="https://images.unsplash.com/photo-1496217590455-aa63a8350eea?auto=format&fit=crop&w=700&q=85"
+                    alt="White Khimar">
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">WHITE</span>
+
+                    <h3>Classic White Khimar</h3>
+
+                    <div class="price">৳799</div>
+
+                    <button class="cart-add"
+                    onclick="addToCart('Classic White Khimar',799)">
+                        🛒 Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="new">NEW</span>
+
+                    <img
+                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=85"
+                    alt="Premium Khimar">
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">BEIGE</span>
+
+                    <h3>Soft Beige Khimar</h3>
+
+                    <div class="price">৳899</div>
+
+                    <button class="cart-add"
+                    onclick="addToCart('Soft Beige Khimar',899)">
+                        🛒 Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="new">NEW</span>
+
+                    <img
+                    src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=700&q=85"
+                    alt="Black Khimar">
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">BLACK</span>
+
+                    <h3>Elegant Black Khimar</h3>
+
+                    <div class="price">৳899</div>
+
+                    <button class="cart-add"
+                    onclick="addToCart('Elegant Black Khimar',899)">
+                        🛒 Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="new">NEW</span>
+
+                    <img
+                    src="https://images.unsplash.com/photo-1506629905607-d9c297d75b2f?auto=format&fit=crop&w=700&q=85"
+                    alt="Pink Khimar">
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">PINK</span>
+
+                    <h3>Rose Pink Khimar</h3>
+
+                    <div class="price">৳899</div>
+
+                    <button class="cart-add"
+                    onclick="addToCart('Rose Pink Khimar',899)">
+                        🛒 Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ORDER ================= -->
+
+<section class="order-section" id="order">
+
+    <div class="container">
+
+        <div class="order-box">
+
+            <div class="order-left">
+
+                <p class="small-title">READY TO ORDER?</p>
+
+                <h2>Order Your Favourite Product</h2>
+
+                <p>
+                    Fill up the form and we will receive your
+                    order directly on WhatsApp.
+                </p>
+
+                <div class="whatsapp-number">
+                    🟢 WhatsApp: <strong>01722332233</strong>
+                </div>
+
+            </div>
+
+
+            <form id="orderForm" onsubmit="submitOrder(event)">
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <textarea
+                    id="customerAddress"
+                    placeholder="Full Delivery Address"
+                    required
+                ></textarea>
+
+                <select id="orderProduct">
+
+                    <option value="">
+                        Select Product
+                    </option>
+
+                    <option>Elegant Salat Khimar</option>
+                    <option>Premium Soft Khimar</option>
+                    <option>Classic Prayer Khimar</option>
+                    <option>Luxury Salat Khimar</option>
+                    <option>Royal Premium Khimar</option>
+                    <option>Salat Khimar Package</option>
+                    <option>Classic White Khimar</option>
+                    <option>Soft Beige Khimar</option>
+                    <option>Elegant Black Khimar</option>
+                    <option>Rose Pink Khimar</option>
+
+                </select>
+
+                <input
+                    type="number"
+                    id="orderQuantity"
+                    value="1"
+                    min="1"
+                    placeholder="Quantity"
+                >
+
+                <button type="submit">
+                    💬 Order On WhatsApp
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+    <div class="container about-grid">
+
+        <div>
+
+            <p class="small-title">ABOUT TOMAL</p>
+
+            <h2>Beautiful Modesty,<br>Made With Love.</h2>
+
+        </div>
+
+        <div>
+
+            <p>
+                TOMAL brings you premium quality Salat Khimar
+                and modest fashion products designed for comfort,
+                elegance and everyday use.
+            </p>
+
+            <p>
+                We believe modest clothing should be beautiful,
+                comfortable and accessible to everyone.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <a href="#home" class="logo footer-logo">
+                🌿 TOMAL
+            </a>
+
+            <p>
+                Premium Salat Khimar & Modest Fashion.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <a href="#home">Home</a>
+            <a href="#products">All Product</a>
+            <a href="#premium">Premium Collection</a>
+            <a href="#package">Salat Khimar Package</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Contact</h4>
+
+            <p>📞 01722332233</p>
+            <p>💬 WhatsApp Order</p>
+            <p>🇧🇩 Bangladesh</p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Follow Us</h4>
+
+            <div class="social">
+                <a href="#">f</a>
+                <a href="#">◎</a>
+                <a href="#">▶</a>
+                <a href="#">♪</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 TOMAL. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/8801722332233"
+    target="_blank">
+
+    <span>💬</span>
+
+    <div>
+        <small>Order Now on WhatsApp</small>
+        <strong>01722332233</strong>
+    </div>
+
+</a>
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div class="modal" id="cartModal">
+
+    <div class="modal-content">
+
+        <button class="modal-close" onclick="closeCart()">×</button>
+
+        <h2>Your Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+            Total: ৳<span id="cartTotal">0</span>
+        </div>
+
+        <button class="checkout-btn" onclick="checkoutCart()">
+            💬 Checkout On WhatsApp
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SEARCH MODAL ================= -->
+
+<div class="search-modal" id="searchModal">
+
+    <div class="search-inner">
+
+        <button onclick="closeSearch()">×</button>
+
+        <h2>Search Products</h2>
+
+        <input
+            type="text"
+            id="modalSearch"
+            placeholder="Type product name..."
+            onkeyup="searchFromModal()"
+        >
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
